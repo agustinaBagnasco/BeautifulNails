@@ -21,7 +21,7 @@ body {
   color: aliceblue;
 }
 
-h5 {
+h5, h4 {
   font-family: "Julee", cursive;
   font-weight: 400;
   font-style: normal;
@@ -97,4 +97,10 @@ h1 {
 .form{
   width: 50%;
   transform: translateX(50%)
+}
+
+@media(width <= 600){
+  body{
+    color: blue;
+  }
 }
