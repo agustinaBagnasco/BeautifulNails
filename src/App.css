@@ -13,11 +13,7 @@ body {
   background-color: rgba(92, 97, 101, 0.192);
 }
 
-.nav-link {
-  color: aliceblue;
-}
-
-.container {
+.nav-link, .container {
   color: aliceblue;
 }
 
@@ -67,7 +63,6 @@ h1 {
   transition: .5s ease;
   border-radius: 10px;
   border: solid rgb(156, 96, 106);
-
 }
 .galeria img:hover{
   cursor: crosshair;
@@ -76,15 +71,8 @@ h1 {
   filter: contrast(120%);
 }
 .contacto{
-  color: black;
   margin-bottom: 50px; 
   margin-top:30px;
-}
-.novedades{
-  text-align: center;
-  border: solid rgb(236, 162, 188);
-  margin-top: 50px;
-  padding: 50px;
 }
 .redes{
   text-align: center;
@@ -98,9 +86,28 @@ h1 {
   width: 50%;
   transform: translateX(50%)
 }
+.un-servicio{
+  display: grid;
+  grid-template-columns: 50% 70%;
+  margin: 10px;
+  padding: 20px;
+  background-color: rgba(164, 114, 118, 0.505);
+}
+.img-servicio{
+  max-width: 450px;
+  border: solid 10px white;
+  margin: 20px;
+}
 
-@media(width <= 600){
-  body{
-    color: blue;
+@media(max-width: 1060px){
+  .un-servicio{
+    display: block;
+  }
+  .desc-container{
+   margin: 30px;
+   text-align: justify;
+  }
+  .img-servicio{
+    max-width: 300px;
   }
 }

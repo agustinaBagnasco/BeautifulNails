@@ -12,7 +12,7 @@ import img9 from '../img/9.jpg';
 function Disenios() {
   return (
     <div className='container'>
-    <div class="row justify-content-center mb-5" >
+    <div className="row justify-content-center mb-5" >
       <h1>Nuestros dise&ntilde;os </h1>
       <h5>Ideas para el tuyo!</h5>
     <div class="galeria">

@@ -45,11 +45,10 @@ function Servicios() {
         que se aplican sobre las uñas naturales. Éstas tienen como 
         propósito crear una capa protectora, mientras cambian la forma 
         o incrementan la longitud de las uñas, sumándoles mayor 
-        resistencia y perfeccionando su aspecto.'
-        beneficios='pueden llegar a durar entre seis a ocho semanas, 
+        resistencia y perfeccionando su aspecto.'     
+        beneficios='Pueden llegar a durar entre seis a ocho semanas, 
         dependiendo del crecimiento natural de las uñas y, desde luego, 
-        de los cuidados y el mantenimiento constante.
-        protege las uñas de los efectos dañinos de los esmaltes, 
+        de los cuidados y el mantenimiento constante. protege las uñas de los efectos dañinos de los esmaltes, 
         además de evitar el quiebre constante si es que tienes uñas débiles.
         es posible lograr diseños mucho más innovadores al 
         permitirnos darle la forma y longitud deseada, también ayuda a 
@@ -62,14 +61,18 @@ function Servicios() {
 
 export default Servicios
 
-function Unservicio({ title, description, pic, alt, beneficios }) {
+function Unservicio({ pic, alt, title, description, beneficios}) {
   return (
-    <div className='unservicio'>
-      <img src={`${pic}`} alt={`${alt}`} />
-      <h4>{title}</h4>
-      <p>{description}</p>
-      <h5>Beneficios</h5>
-      <p>{beneficios}</p>
+    <div className='un-servicio'>
+      <div className='col-4 img-container'>
+        <img src={`${pic}`} alt={`${alt}`} className='img-servicio' />
+      </div>
+      <div className='col-8 desc-container'>
+        <h4 style={{ color: 'pink', textShadow: '2px 2px grey', textDecoration: 'underline' }}>{title}</h4>
+        <p>{description}</p>
+        <h5 style={{ color: 'pink', textShadow: '2px 2px grey', textDecoration: 'underline' }}>Beneficios:</h5>
+        <p>{beneficios}</p>
+      </div>
     </div>
   )
 }

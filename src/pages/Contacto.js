@@ -32,11 +32,11 @@ function Contacto() {
 
         <form className='form'>
           <div className="mb-3">
-            <label for="nombre" className="form-label">Nombre</label>
+            <label htmlFor="nombre" className="form-label">Nombre</label>
             <input type="nombre" className="form-control" id="inputNombre" aria-describedby="nombreHelp" />
           </div>
           <div className="mb-3">
-            <label for="email" className="form-label">E-mail</label>
+            <label htmlFor="email" className="form-label">E-mail</label>
             <input type="email" className="form-control" id="inputEmail" />
           </div>
           <div className='mb-3'>
