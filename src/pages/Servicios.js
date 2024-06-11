@@ -5,7 +5,7 @@ import acrilica from '../img/acrilica.jpg'
 
 function Servicios() {
   return (
-    <div className='container'>
+    <div className='container' style={{marginBottom:'150px'}}>
       <Unservicio
         pic={semi}
         alt={'Imagen esmaltado semipermanente'}
@@ -15,11 +15,12 @@ function Servicios() {
         Este efecto se consigue con la aplicación de esmaltes específicos 
         y el secado de las uñas en una luz UV o LED.
         Si quieres que tus uñas se vean perfectas durante 15 días, 
-        la manicura semipermanente es la mejor opción. '
-        beneficios='Dura hasta 14 días
-        Brillo duradero
-        Poco agresiva
-        Evita que te muerdas las uñas'/>
+        la manicura semipermanente es la mejor opción. '>
+        <Beneficios
+          texto1='Dura hasta 14 días'
+          texto2='Brillo duradero y poco agresivo'
+          texto3='Evita que te muerdas las uñas' />
+      </Unservicio>
 
       <Unservicio
         pic={gel}
@@ -29,13 +30,15 @@ function Servicios() {
         acrílico que se adhiere a la uña mediante un pegamento específico 
         con el fin de garantizar una manicura perfecta incluso en casos difíciles 
         de reconstrucción como son pérdida de uña, uñas comidas o uñas quebradizas. 
-        También es una técnica muy utilizada para aumentar la longitud de la uña.'
-        beneficios='Duracion: el esmalte de gel durará perfectamente de 2 a 3 semanas siempre 
-        y cuando se cuide adecuadamente la manicura.
-        las uñas de gel dan una apariencia 100% natural y son más fuertes 
-        que otro tipo de uñas postizas 
-        permite cambiar la longitud y la forma de las uñas
-        técnica es inolora.'/>
+        También es una técnica muy utilizada para aumentar la longitud de la uña.'>
+        <Beneficios
+          texto1='Durará perfectamente de 2 a 3 semanas siempre 
+        y cuando se cuide adecuadamente la manicura'
+          texto2='Apariencia 100% natural y son más fuertes 
+        que otro tipo de uñas postizas'
+          texto3='Permite cambiar la longitud y la forma de las uñas
+        técnica es inolora'/>
+      </Unservicio>
 
       <Unservicio
         pic={acrilica}
@@ -45,23 +48,23 @@ function Servicios() {
         que se aplican sobre las uñas naturales. Éstas tienen como 
         propósito crear una capa protectora, mientras cambian la forma 
         o incrementan la longitud de las uñas, sumándoles mayor 
-        resistencia y perfeccionando su aspecto.'     
-        beneficios='Pueden llegar a durar entre seis a ocho semanas, 
+        resistencia y perfeccionando su aspecto.'>
+        <Beneficios
+          texto1='Pueden durar entre seis a ocho semanas, 
         dependiendo del crecimiento natural de las uñas y, desde luego, 
-        de los cuidados y el mantenimiento constante. protege las uñas de los efectos dañinos de los esmaltes, 
-        además de evitar el quiebre constante si es que tienes uñas débiles.
-        es posible lograr diseños mucho más innovadores al 
-        permitirnos darle la forma y longitud deseada, también ayuda a 
-        perfeccionar la apariencia de las uñas naturales, reconstruyéndolas y 
-        haciéndolas mucho más simétricas, 
-        especialmente si se han roto o desgastado.'/>
+        de los cuidados y el mantenimiento constante'
+          texto2='Protege las uñas de los efectos dañinos de los esmaltes, 
+        además de evitar el quiebre constante si es que tienes uñas débiles.'
+          texto3='Es posible lograr diseños mucho más innovadores al 
+        permitirnos darle la forma y longitud deseada' />
+      </Unservicio>
     </div>
   )
 }
 
 export default Servicios
 
-function Unservicio({ pic, alt, title, description, beneficios}) {
+function Unservicio({ pic, alt, title, description, children }) {
   return (
     <div className='un-servicio'>
       <div className='col-4 img-container'>
@@ -71,8 +74,22 @@ function Unservicio({ pic, alt, title, description, beneficios}) {
         <h4 style={{ color: 'pink', textShadow: '2px 2px grey', textDecoration: 'underline' }}>{title}</h4>
         <p>{description}</p>
         <h5 style={{ color: 'pink', textShadow: '2px 2px grey', textDecoration: 'underline' }}>Beneficios:</h5>
-        <p>{beneficios}</p>
+        {children}
       </div>
     </div>
   )
+}
+
+function Beneficios({ texto1, texto2, texto3 }) {
+  return (
+    <>
+      <ul>
+        <li>{texto1}</li>
+        <li>{texto2}</li>
+        <li>{texto3}</li>
+      </ul>
+
+    </>
+  )
+
 }
