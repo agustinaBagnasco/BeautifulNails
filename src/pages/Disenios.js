@@ -15,7 +15,7 @@ function Disenios() {
     <div className="row justify-content-center mb-5" >
       <h1>Nuestros dise&ntilde;os </h1>
       <h5>Ideas para el tuyo!</h5>
-    <div class="galeria">
+    <div className="galeria">
         <img src={img1} alt='Imagen unas'/>
         <img src={img2} alt='Imagen unas'/>
         <img src={img3} alt='Imagen unas'/>

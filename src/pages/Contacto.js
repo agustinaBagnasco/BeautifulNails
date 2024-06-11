@@ -7,7 +7,6 @@ import map from '../assets/logo-map.svg'
 function Contacto() {
   return (
     <>
-
       <div className='container' style={{ marginBottom: "200px" }}>
         <h1 style={{ textAlign: 'center' }}>Contactanos</h1>
         <hr />
@@ -48,22 +47,21 @@ function Contacto() {
         </form>
         <hr />
         <div className='row justify-content-md-center'>
-          <div className='col col-lg-2' style={{ textAlign: 'right' }}>
-            <h5>Nuestra ubicacion</h5>
-
-            <p>MAPA</p>
-
-          </div>
-          <div className='col col-lg-2'>
+          <div className='col col-lg-6' style={{ textAlign: 'left', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <a href="https://maps.app.goo.gl/mrhyjhE1avz7aRrr7" target='blank' title='Ver mapa'>
               <img src={map} alt='Logo ubicacion' className='m-4' />
             </a>
+            <div>
+              <h5>Donde estamos? </h5>
+              <p>En Val Pellice y Avenida Artigas<br />Colonia Valdense - Colonia</p>
+            </div>
           </div>
-
         </div>
       </div>
     </>
+
   )
 }
 
-export default Contacto
+export default Contacto;
+
